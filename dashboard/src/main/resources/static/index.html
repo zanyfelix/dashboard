@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>DashBoard</title>
+
+        <!-- ================= Favicon ================== -->
+        <!-- Standard -->
+        <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+        <!-- Retina iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+        <!-- Retina iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+        <!-- Standard iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+        <!-- Standard iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+        <!-- Styles -->
+        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+
+        <link href="assets/css/lib/helper.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="logo"><a href="index.html"><img src="/assets/images/logo.png" width="200px" alt="" /></a></div>
+                    <ul>
+                        <li class="label">Main</li>
+                        <li class="active"><a href="index.html"><i class="ti-home"></i> Dashboard</a>
+                        </li>
+                        <li class="label">Feature</li>
+                        <li><a href="taxonomy.html"><i class="ti-layout-grid4-alt"></i>Taxonomy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /# sidebar -->
+
+        <div class="content-wrap">
+            <div class="main">
+                <div class="container-fluid">
+                    <section id="main-content">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="stat-widget-two">
+                                        <div class="stat-content">
+                                            <div class="stat-text">수집 카테고리 개수</div>
+                                            <div class="stat-digit">277</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="stat-widget-two">
+                                        <div class="stat-content">
+                                            <div class="stat-text">총 수집문서 개수 (2018.12.06)</div>
+                                            <div class="stat-digit sum"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="stat-widget-two">
+                                        <div class="stat-content">
+                                            <div class="stat-text">완료 카테고리 수 (2018.12.06)</div>
+                                            <div class="stat-digit">245</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger w-90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /# card -->
+                            </div>
+                            <!-- /# column -->
+                        </div>
+                        <!-- /# row -->
+
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">카테고리 현황 (2018.12.06)</h4>
+                                        <div id="morris-bar-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-title">
+                                        <h4>수집 현황</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>이모티콘</th>
+                                                        <th>이름</th>
+                                                        <th>분류카테고리</th>
+                                                        <th>수집개수</th>
+                                                        <th>상태</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="round-img">
+                                                                <a href=""><img class="w-20" src="assets/images/bookingSystem/1.png" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td><strong>한승은</strong></td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span>경찰</span>
+                                                        		</li>
+                                                        		<li><span>교육</span>
+                                                        		</li>
+                                                        		<li><span>우정</span>
+                                                        		</li>
+                                                        		<li><span>노동</span>
+                                                        		</li>
+                                                        		<li><span>법무</span>
+                                                        		</li>
+                                                        		<li><span>재정</span>
+                                                        		</li>
+                                                        		<li><span>산업</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span name="order1" id="police">1107</span>
+                                                        		</li>
+                                                        		<li><span name="order2" id="education">558</span>
+                                                        		</li>
+                                                        		<li><span name="order3" id="postoffice">192</span>
+                                                        		</li>
+                                                        		<li><span name="order4" id="labor">352</span>
+                                                        		</li>
+                                                        		<li><span name="order5" id="law">307</span>
+                                                        		</li>
+                                                        		<li><span name="order6" id="finance">536</span>
+                                                        		</li>
+                                                        		<li><span name="order7" id="">0</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-warning">진행중</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-warning">진행중</span>		
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="round-img">
+                                                                <a href=""><img class="w-20" src="assets/images/bookingSystem/2.png" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td><strong>김정아</strong></td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span>국방</span>
+                                                        		</li>
+                                                        		<li><span>교통</span>
+                                                        		</li>
+                                                        		<li><span>자원</span>
+                                                        		</li>
+                                                        		<li><span>도로</span>
+                                                        		</li>
+                                                        		<li><span>수자원</span>
+                                                        		</li>
+                                                        		<li><span>주택</span>
+                                                        		</li>
+                                                        		<li><span>세무</span>
+                                                        		</li>
+                                                        		<li><span>청원</span>
+                                                        		</li>
+                                                        		<li><span>민사</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span name="order8" id="military">1334</span>
+                                                        		</li>
+                                                        		<li><span name="order9" id="traffic">390</span>
+                                                        		</li>
+                                                        		<li><span name="order10" id="resource">209</span>
+                                                        		</li>
+                                                        		<li><span name="order11" id="road">155</span>
+                                                        		</li>
+                                                        		<li><span name="order12" id="waterresource">141</span>
+                                                        		</li>
+                                                        		<li><span name="order13" id="house">458</span>
+                                                        		</li>
+                                                        		<li><span name="order14" id="account">470</span>
+                                                        		</li>
+                                                        		<li><span name="order15" id="account">46</span>
+                                                        		</li>
+                                                        		<li><span name="order16" id="account">0</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-warning">진행중</span>		
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="round-img">
+                                                                <a href=""><img class="w-20" src="assets/images/bookingSystem/3.png" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td><strong>임미선</strong></td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span>복지</span>
+                                                        		</li>
+                                                        		<li><span>보건</span>
+                                                        		</li>
+                                                        		<li><span>도시</span>
+                                                        		</li>
+                                                        		<li><span>수자원</span>
+                                                        		</li>
+                                                        		<li><span>농림</span>
+                                                        		</li>
+                                                        		<li><span>해양수산</span>
+                                                        		</li>
+                                                        		<li><span>산업</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span name="order17" id="welfare">619</span>
+                                                        		</li>
+                                                        		<li><span name="order18" id="health">666</span>
+                                                        		</li>
+                                                        		<li><span name="order19" id="city">295</span>
+                                                        		</li>
+                                                        		<li><span name="order20" id="waterresource">151</span>
+                                                        		</li>
+                                                        		<li><span name="order21" id="agriculture">400</span>
+                                                        		</li>
+                                                        		<li><span name="order22" id="ocean">350</span>
+                                                        		</li>
+                                                        		<li><span name="order23" id="industry">0</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-warning">진행중</span>		
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="round-img">
+                                                                <a href=""><img class="w-20" src="assets/images/bookingSystem/8.png" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td><strong>김나현</strong></td>
+                                                       <td>
+                                                        	<ul>
+                                                        		<li><span>외무통일</span>
+                                                        		</li>
+                                                        		<li><span>환경</span>
+                                                        		</li>
+                                                        		<li><span>행정/안전</span>
+                                                        		</li>
+                                                        		<li><span>과학기술</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span name="order24" id="affair">570</span>
+                                                        		</li>
+                                                        		<li><span name="order25" id="environment">687</span>
+                                                        		</li>
+                                                        		<li><span name="order26" id="administration">1000</span>
+                                                        		</li>
+                                                        		<li><span name="order27" id="technology">191</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-warning">진행중</span>		
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="round-img">
+                                                                <a href=""><img class="w-20" src="assets/images/bookingSystem/5.png" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td><strong>신얘가람</strong></td>
+                                                       <td>
+                                                        	<ul>
+                                                        		<li><span>문화</span>
+                                                        		</li>
+                                                        		<li><span>관광</span>
+                                                        		</li>
+                                                        		<li><span>방송통신</span>
+                                                        		</li>
+                                                        		<li><span>체육</span>
+                                                        		</li>
+                                                        		<li><span>산업</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li><span name="order28" id="culture">954</span>
+                                                        		</li>
+                                                        		<li><span name="order29" id="sightseeing">401</span>
+                                                        		</li>
+                                                        		<li><span name="order30" id="broadcast">794</span>
+                                                        		</li>
+                                                        		<li><span name="order31" id="physicaleducation">327</span>
+                                                        		</li>
+                                                        		<li><span name="order32" id="physicaleducation">0</span>
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                        <td>
+                                                        	<ul>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-success">진행완료</span>		
+                                                        		</li>
+                                                        		<li>
+                                                        			<span class="badge badge-warning">진행중</span>		
+                                                        		</li>
+                                                        	</ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- jquery vendor -->
+        <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <!-- nano scroller -->
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
+        <!-- sidebar -->
+        <script src="assets/js/lib/bootstrap.min.js"></script>
+
+        <!-- bootstrap -->
+
+        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+
+        <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
+        <script src="assets/js/lib/morris-chart/morris.js"></script>
+        <script src="assets/js/lib/morris-chart/morris-init.js"></script>
+
+        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <!-- scripit init-->
+    </body>
+
+</html>
